@@ -1,11 +1,7 @@
 #! /bin/sh
 
-helm install --name wp-release stable/wordpress
+helm install --name jenkins-release -f values.yaml stable/jenkins
 
-helm del wp-release --purge
+helm upgrade -f values.yaml --set Master.ImageTag=lts jenkins-release stable/jenkins
 
-helm install --name wp-release \
-  --set wordpressUsername=admin,wordpressPassword=password,mariadb.mariadbRootPassword=secretpassword,persistence.enabled=false,mariadb.persistence.enabled=false \
-    stable/wordpress
-
-helm del wp-release --purge
+helm del jenkins-release --purge

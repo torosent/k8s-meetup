@@ -1,7 +1,7 @@
 #! /bin/sh
 
-aks=tomerAksCluster
-location=westeurope
+aks=demoManagedCluster
+location=eastus
 #AZURE_CLIENT_ID=
 #AZURE_CLIENT_SECRET=
 
