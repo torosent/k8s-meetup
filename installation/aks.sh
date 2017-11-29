@@ -2,8 +2,6 @@
 
 aks=demoManagedCluster
 location=eastus
-#AZURE_CLIENT_ID=
-#AZURE_CLIENT_SECRET=
 
 # Creat Resource Group
 az group create --name $aks --location $location
